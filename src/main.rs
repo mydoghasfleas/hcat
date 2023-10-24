@@ -72,7 +72,7 @@ fn output_byte_group_ascii(bytes : &[u8]) {
     print!("|");
     for &b in bytes {
         match b {
-            32..=126 | 127 => print!("{}", char::from(b)),
+            32..=126 => print!("{}", char::from(b)),
             _ => print!(".")
         }
         
